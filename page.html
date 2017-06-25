@@ -1,0 +1,406 @@
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="shortcut icon" href="img/logo45.gif">
+	<link href='https://fonts.googleapis.com/css?family=Oxygen:100,250,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+ 
+	<title>SSN Cube Open</title>
+	<script src="./js/jquery-1.11.3.min.js"> </script>
+	<script src="./js/bootstrap.min.js"> </script>
+	<script>
+	$(document).ready(function () {
+	$("nav").find("li").on("click", "a", function () {
+	$('.navbar-collapse.in').collapse('hide');
+	});
+	});
+	$(document).ready(function() {
+	function filterPath(string) {
+	return string
+	.replace(/^\//,'')
+	.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+	.replace(/\/$/,'');
+	}
+	var locationPath = filterPath(location.pathname);
+	var scrollElem = scrollableElement('html', 'body');
+	
+	$('a[href*=#]').each(function() {
+	var thisPath = filterPath(this.pathname) || locationPath;
+	if ( locationPath == thisPath
+	&& (location.hostname == this.hostname || !this.hostname)
+	&& this.hash.replace(/#/,'') ) {
+	var $target = $(this.hash), target = this.hash;
+	if (target) {
+	var targetOffset = $target.offset().top;
+	$(this).click(function(event) {
+	event.preventDefault();
+	$(scrollElem).animate({scrollTop: targetOffset}, 400, function() {
+	location.hash = target;
+	});
+	});
+	}
+	}
+	});
+	
+	function scrollableElement(els) {
+	for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+	var el = arguments[i],
+	$scrollElement = $(el);
+	if ($scrollElement.scrollTop()> 0) {
+	return el;
+	} else {
+	$scrollElement.scrollTop(1);
+	var isScrollable = $scrollElement.scrollTop()> 0;
+	$scrollElement.scrollTop(0);
+	if (isScrollable) {
+	return el;
+	}
+	}
+	}
+	return [];
+	}
+	
+	});
+	</script> 
+	</head>
+
+	<body>
+	<header>
+	<nav id="header-nav" class="navbar navbar-default pos">
+	<div class="navbar-header">
+	<a href="index.html" class="pull-left visible-md visible-sm visible-lg">
+	<div id="img-logof" style="background: url('img/logo451.gif') ; width: 46px; height: 46px; background-repeat: no-repeat;margin-left: 10px;"></div></a>
+	<button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+	<span class="sr-only">Toggle navigation</span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	</button> 
+	</div>
+	
+	<div class="container">
+	<div id="collapsable-nav" class="collapse navbar-collapse">
+	<ul id="nav-list" class="nav navbar-nav navbar-right">
+	<li>
+	<a href="#About" data-text="ABOUT" class="text-center hvr-radial-out ">ABOUT</a>
+
+	</li> 
+	<li>
+	<a href="#Events" data-text="EVENTS" class="text-center hvr-radial-out ">EVENTS</a>
+
+	</li> 
+	<li>
+	<a href="#Sched" data-text="SCHEDULE" class="text-center hvr-radial-out ">SCHEDULE</a>
+	</li> 
+	<li>
+	<a href="#Venue" data-text="VENUE" class="text-center hvr-radial-out ">VENUE</a>
+
+	</li> 
+	<li>
+	<a href="#Register" data-text="REGISTRATION" class="text-center hvr-radial-out ">REGISTRATION</a>
+	</li> 
+	<li>
+	<a href="#Accomodation" data-text="ACCOMODATION" class="text-center hvr-radial-out ">ACCOMODATION</a>
+	</li> 
+	<li>
+	<a href="#Contact" data-text="CONTACT US" class="text-center hvr-radial-out ">CONTACT US</a>
+	</li> 
+	</ul><!-- #nav-list -->
+	</div><!-- .collapse .navbar-collapse -->
+	</div>
+	</nav>
+	</header>
+	
+	<div class="godown-60" id="godown"></div>
+	
+	<div id="main-content" class="container">
+	<center>
+	<div class="text-center"><img width="100" height="50" src="./img/ssnlogo.jpg"></div><br>
+	<div class="text-center" id="cname" style="font-size: 20px;"><b>SSN COLLEGE OF ENGINEERING</b></div><br>
+	<div id="mathdp" class="text-center" style="font-size: 20px;"><b>DEPARTMENT OF MATHEMATICS</b></div><br>
+	<div id="mathcl" class="text-center" style="font-size: 20px;"><b>SSN MATH CLUB</b></div><br>
+	<div id="org" class="text-center" style="font-size: 20px;"><b>PRESENTS</b></div><br>
+	</center>
+	<div id="sco" class="text-center" style="float: left;"><B>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSSN CUBE OPEN 2017</B></div>
+	<div id="rb" class="text-center"><B>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRECOGNIZED BY</B></div>
+	<img src="./img/sco.jpg" width="300" height="300" style="float: left; margin-right: 1%; margin-bottom: 0.5em;">
+	<img src="./img/wca.jpg" width="400" height="300" style="float: right; margin-right: 1%; margin-bottom: 0.5em;"><br>
+	
+	<!--img width="200" height="200" src="./img/sco.jpg">
+	<div id="rb" class="text-center"><B>RECOGNIZED BY</B></div>
+	<img width="250" height="200" src="./img/wca.jpg">
+	</center-->
+	</div>
+	
+	
+	
+	
+	<div id="About" class="container nt">
+	<center>
+	<h2 class="glyphicon glyphicon-info-sign" style="color: #33A903">About</h2>
+	<p style="font-size: 20px;"><br><br>SSN CUBE OPEN 2017 is organised by Department of Mathematics, SSN College of Engineering,Chennai and will be held during <span style="color: #ffb200">28th</span> and <span style="color: #ffb200">29th</span> of July in association with the World Cube Association. The competition is open to all competitors of all nationalities and age group. No prior experience in WCA competitions is necessary, but competitors should be familiar with the 
+	<a class="WCAreg" target="_blank" href="https://worldcubeassociation.org/regulations" style="color: #007FA"><u>regulation</u></a>.Certain event based 
+	time limits will be in place in each category which will be announced on the spot.
+	<br><br><br>
+	</p>
+	<div id="countdown">
+	<iframe id="cntdn" width="350" height="240" src="https://w2.countingdownto.com/1854575" frameborder="0" scrolling="no" seamless="seamless"> 
+	</iframe>
+	<br><br><br><br><br>
+	</div>
+	</center>
+	</div>
+	
+	
+	
+	<div id="Events" class="container page_section nt"> 
+	<center>
+	<h2 class="glyphicon glyphicon-tasks" style="color: #79DAD5">Events</h2>
+	<section class="row">
+	
+	<span style="color: #FF0F00">
+	
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>2x2x2</p>
+	<img width="200" height="200" src="./img/2x2x2.jpeg">
+	</div>
+	</div>
+	
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>3x3x3</p>
+	<img width="200" height="200" src="./img/3x3x3.jpg">
+	</div>
+	</div>
+	
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>4x4x4</p>
+	<img width="200" height="200" src="./img/4x4x4.jpg" style="position:relative;left:-10px;">
+	</div>
+	</div>
+
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>3x3x3 <br> Blindfolded</p>
+	<img width="200" height="200" src="./img/3x3x3b.jpg">
+	</div>
+	</div>
+
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>3x3x3 <br> One Handed</p>
+	<img width="200" height="200" src="./img/3x3x3 onehand.jpg">
+	</div>
+	</div>
+
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>3x3x3<br>Multiple Blindfold</p>
+	<img width="200" height="200" src="./img/3x3x3mb.jpeg">
+	</div>
+	</div>
+	
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>Megaminx</p>
+	<img width="200" height="200" src="./img/megaminx.jpg" style="position: relative;left: -10px;">
+	</div>
+	</div>
+	
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>Pyraminx</p>
+	<img width="200" height="200" src="./img/pyraminx.jpg">
+	</div>
+	</div>
+
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>Skewb</p>
+	<img width="200" height="200" src="./img/skewb.jpg">
+	</div>
+	</div>
+	
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>4x4x4<br>Blindfold</p>
+	<img width="200" height="200" src="./img/4x4x4b.jpg">
+	</div>
+	</div>
+	
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>Square 1</p>
+	<img width="200" height="200" src="./img/square1.jpg">
+	</div>
+	</div>
+	
+	<div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+	<div class="category-tile">
+	<p>Clock</p>
+	<img width="200" height="200" src="./img/Clock.jpg">
+	</div>
+	</div>
+	
+	<div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12">
+	<div class="category-tile">
+	<p>5x5x5</p>
+	<img width="200" height="200" src="./img/5x5x5.jpeg">
+	</div>
+	</div>
+	
+	</span>
+	
+	</section>
+	</div>
+	
+	<div id="Sched" class="container nt">
+	<center>
+	<h2 class="glyphicon glyphicon-calendar" style="color: #FFC500">Schedule</h2>
+	<br>
+	<div>
+	<!--img class="dimg" src="./img/aug5.jpg" height="150" width="110">
+	& 	
+	<img class="dimg" src="./img/aug6.jpg" height="150" width="110">
+	2016 -->
+	</div>
+	
+	<p style="font-size: 15px">
+	<br>
+	Link for the schedule : <a target="_blank" style="color: #337ab7;" href="https://drive.google.com/open?id=0B-qeAhj4yNFYMWVvcGxDZVoxYnc"><u>Schedule Document</u></a>
+	</p>
+	</center>
+	</div> 
+	
+	
+	<div id="Venue" class="container nt">
+	<center>
+	<h2 class="glyphicon glyphicon-map-marker" style="color: #99FD50">Venue</h2>
+	<p class="up-second" style="font-size: 20px;">
+	The event will be held at Mini Auditorium, SSN College of Engineering on 28th and 29th of JULY.<br><br>
+	</p>
+	<img class="mySlides" height="400" width="600" src="img/1.jpg">
+	<img class="mySlides" height="400" width="600" src="img/2.jpg">
+	<img class="mySlides" height="400" width="600" src="img/3.jpg">
+	<img class="mySlides" height="400" width="600" src="img/4.jpg">
+	<script>
+	var slideIndex = 0;
+	carousel();
+
+	function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 1200); // Change image every 2 seconds
+}
+	</script>
+	
+	<p class="up-second" style="font-size: 20px;">
+	Click <a href="https://docs.google.com/document/d/1KDO6cQMCMasXjVBQy8wOSKdapTutAky0mJuhv8tlstg/edit?usp=sharing">here</a> to view the complete travel guide to SSN College of Engineering.
+	</p>
+	
+	<div id="map-tile" class="col-md-12 col-sm-12 col-xs-12 col-xss-12">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3891.42536348976!2d80.1950815142493!3d12.750865091000996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2f59c80ccabea9b0!2sMini+Auditorium-+SSN+College+Of+Engineering!5e0!3m2!1sen!2sin!4v1497506209934" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<br>
+	</center>
+	</div>
+	
+	<div id="Register" class="container nt"> 
+	<center>
+	<h2 class="glyphicon glyphicon-pencil" style="color: #e6563e">Registration</h2><br><br>
+	<p class="register" style="font-size: 20px;">
+	<span class="glyphicon glyphicon-triangle-right" style="color: #e6563e;"></span>
+	Register on WCA website. <br>
+	<a class="WCAregister" target="_blank" href="https://worldcubeassociation.org/" style="color: #007FA"><u>Click Here</u></a><br><br>
+	<span class="glyphicon glyphicon-ok" style="color: #e6563e;"></span>
+	Make an account if you do not have one.<br> <br>
+	<span class="glyphicon glyphicon-ok" style="color: #e6563e;"></span>
+	Make sure you use your WCA ID and don&#39;t use any initials.
+	<br><br>
+	</p>
+	<p class="register" style="font-size: 20px;">
+	<span class="glyphicon glyphicon-triangle-right" style="color: #e6563e;" ></span>
+	Payment is on the spot.<br></p>
+	<br>
+	<h2 class="as" style="color: #8300FF">&#8377;Fee-Structure<br></h2><br>
+	<br>
+	<p class="register" style="font-size: 20px;">
+	1 event : Rs.150<br>
+	<br>
+	For every Additional event : Rs.50<br><br> <br><br>
+	</p>
+	</center>
+	</div> 
+	
+	<div id="Accomodation" class="container nt"> 
+	<center>
+	<h2 class="glyphicon glyphicon-bed" style="color: #F300FF">Accomodation</h2><br>
+	<p class="accomodation" style="font-size: 15px;">
+	<span class="glyphicon glyphicon-hand-right" style="color: #e6563e;"></span>
+	All participants are requested to go through the general rules and regulation  for staying in hostels of SSN college of engineering.<br>
+	Click <a href="https://drive.google.com/open?id=11x69bWU6cd0ZZrCOxkjMHMJ4fuH-_wl6FR4ULXwPJqo">here</a> to view the Rules and Regulations.<br><br>
+	<span class="glyphicon glyphicon-hand-right" style="color: #e6563e;"></span>
+	All participants willing to avail accomodation are requested to fill below google form.<br>
+	<a href="https://docs.google.com/forms/d/e/1FAIpQLSe82pBVp-6_O9qRxhGOCO33DfafGFTkR5lc1OqvNHRErT6BRQ/viewform">https://docs.google.com/forms/d/e/1FAIpQLSe82pBVp-6_O9qRxhGOCO33DfafGFTkR5lc1OqvNHRErT6BRQ/viewform</a><br>
+	</p>
+	</center> 
+	</div> 
+	
+	<div id="Contact" class="container nt">
+	<center>
+	<h2 class="glyphicon glyphicon-phone-alt" style="color: #FF6F7E">Organizers</h2>
+	<br><br>
+	<p> You can contact student co-ordinators at the following numbers for any queries.</p>
+	<p>
+	<br>
+	<span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+	Vishwanath Jeyaraman :
+	<span class="glyphicon glyphicon-earphone"></span>
+	+91 9791042330 &nbsp;&nbsp;
+	<span class="glyphicon glyphicon-envelope"></span>
+	<a href="mailto:vishwanath.jeyaraman@gmail.com"> &nbsp;vishwanath.jeyaraman@gmail.com</a> <br><br>
+	<span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+	Sylesh Kumar : 
+	<span class="glyphicon glyphicon-earphone"></span>
+	+91 9176063410 &nbsp;&nbsp;
+	<span class="glyphicon glyphicon-envelope"></span>
+	<a href="mailto:Syleshkumar1996@gmail.com"> &nbsp;Syleshkumar1996@gmail.com</a> <br><br></p>
+	
+	<h2 class="glyphicon glyphicon-send" style="color: #70D604">Faculty-Coordinators </h2>
+	<br><br>
+	<p>
+	<span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+	Dr. S. Narasimman : &nbsp;
+	<span class="glyphicon glyphicon-envelope"></span>
+	<a href="mailto:narasimmans@ssn.edu.in">&nbsp;narasimmans@ssn.edu.in</a><br><br>
+	</p>
+	<p>
+	<span class="glyphicon glyphicon-star-empty" style="color: #e6563e;" ></span>
+	Dr. M. Sundarakannan : &nbsp;
+	<span class="glyphicon glyphicon-earphone"></span>
+	+91 9944558794 &nbsp;&nbsp;
+	<span class="glyphicon glyphicon-envelope"></span>
+	<a href="mailto:sundarakannanm@ssn.edu.in">&nbsp;sundarakannanm@ssn.edu.in</a><br><br>
+	</p>
+	
+	</center>
+	</div> 
+	
+	</body>
+	</html>
+	
+
